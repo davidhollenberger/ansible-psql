@@ -1,0 +1,18 @@
+---
+# tasks file for ansible-psql
+
+- name: clone dba-scripts repo
+  git:
+    repo: https://github.com/CruGlobal/dba-scripts.git
+    dest: ~/dba-scripts
+
+- name: Template psql settings
+  template:
+    src: psqlrc.j2
+    dest: ~/.psqlrc
+
+- name: Template pgpass
+  template:
+    src: pgpass.j2
+    dest: ~/.pgpass
+    mode: 0600

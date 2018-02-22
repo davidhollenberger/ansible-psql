@@ -1,0 +1,8 @@
+---
+- name: Configure psql
+  hosts: localhost
+  connection: local
+  vars_files:
+    - psql_vault.yml
+  roles:
+    - role: ansible-psql

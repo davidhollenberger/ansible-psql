@@ -1,0 +1,4 @@
+.DS_Store
+venv/
+psql_vault.yml
+ansible.cfg
